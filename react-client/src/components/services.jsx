@@ -1,6 +1,6 @@
 import { BsShieldFillCheck } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
-import { RiHeart2Fill } from "react-icons/hi";
+import { RiHeart2Fill } from "react-icons/ri";
 
 const Servicecard = ({ color, title, icon, subtitle }) => {
   <div className="flex flex-rwo justify-start items-center white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">

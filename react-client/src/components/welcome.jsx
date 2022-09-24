@@ -21,7 +21,9 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 );
 
 const shortenAccountAddress = (address) =>
-  `${address.slice(0, 5)}....${address.slice(address.length - 7)}`;
+  address
+    ? `${address?.slice(0, 5)}....${address?.slice(address?.length - 7)}`
+    : "";
 
 const Welcome = () => {
   const {

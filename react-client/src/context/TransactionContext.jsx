@@ -66,7 +66,8 @@ export const TransactionProvider = ({ children }) => {
       });
 
       if (accounts?.length) setCurrentAccount(accounts?.[0]);
-      else return alert("No Account has been Found from MetaMask");
+      else alert("No Account has been Found from MetaMask");
+      getAllTransactions();
     } catch (err) {
       console.log(err);
       throw new Error("No Ethereum Object has been found !!");
@@ -150,7 +151,6 @@ export const TransactionProvider = ({ children }) => {
   useEffect(() => {
     checkWalletConnected();
     checkIfTransactionExist();
-    getAllTransactions();
   }, []);
 
   return (
