@@ -31,7 +31,7 @@ contract Transactions {
         string memory message,
         string memory keyword
     ) public {
-        transactionCount++;
+        transactionCount += 1;
 
         transactions.push(
             TransferStruct(
@@ -62,7 +62,7 @@ contract Transactions {
         return transactions;
     }
 
-    function getTransactionCouimn() public view returns (uint256) {
+    function getTransactionCount() public view returns (uint256) {
         return transactionCount;
     }
 }
