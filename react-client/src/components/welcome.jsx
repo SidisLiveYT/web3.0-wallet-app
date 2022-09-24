@@ -20,6 +20,9 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   />
 );
 
+const shortenAccountAddress = (address) =>
+  `${address.slice(0, 5)}....${address.slice(address.length - 7)}`;
+
 const Welcome = () => {
   const {
     currentAccount,
@@ -89,6 +92,9 @@ const Welcome = () => {
                 <BsInfoCircle fontSize={17} color="#fff" />
               </div>
               <div>
+                <p className="text-white font-semibold text-lg mt-1">
+                  {shortenAccountAddress(currentAccount)}
+                </p>
                 <p className="text-white font-semibold text-lg mt-1">
                   Ethereum
                 </p>
